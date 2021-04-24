@@ -16,7 +16,7 @@ Collection of general-purpose scripts for RNAseq data analysis. Nearly all these
    * Run fastqc in parallel with `fastqc_cmdgen.sh` and `fastqc_parallelization.sh`.
    * Run `fastqc_extract.sh`, sending output to new directory (e.g. fqcres).
    * Run `Rscript fastqc_output_merge.R` to get outptu file showing fastqc flags across all libraries.
-   * **NOTE: This R file is designed for NovaSeq output which has a few different output parameters than non-patterned flowcell platforms like MiSeq/HiSeq, change as necessary**
+   * **NOTE: This R file is designed for NovaSeq output which has a few different output parameters than non-patterned flowcell platforms like MiSeq/HiSeq - change as necessary**
 
 4. Generate .bam files, aligning reads to reference genome.
    * `HISAT2_alignment_cmdgen.sh > hisat_human.cmdlist` to generate parallel processing list.
@@ -24,6 +24,8 @@ Collection of general-purpose scripts for RNAseq data analysis. Nearly all these
    * Modify files accordingly based on filenames, library #, trimming parameters, and single-end v.s. paired-end reads.
 
 5. Generate alignment statistics using flagstat command.
+   * Run in parallel across all libraries using `flagstat_cmdgen.sh` and `flaststat_parallel.sh`
+   * Extract outputs in .csv form using `flagstat_extract.R`
 
 6.
 
