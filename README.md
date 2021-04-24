@@ -2,6 +2,8 @@
 
 Collection of general-purpose scripts for RNAseq data analysis. Nearly all these scripts are intended for use in a high-performance computing environment (CAMH SCC) with the SLURM workload manager, for both feasibility and speed.
 
+Downstream analyses are geared towards single-cell-type RNAseq, namely laser-microdissected populations of neuronal cell-types from post-mortem tissue performed in the Sibille Lab. Contact me directly for more information on the approach/methods.
+
 1. Prepare reference genome, annotations, and splicesite files.
    * Refer to `reference_genome.sh`.
 
@@ -27,5 +29,7 @@ Collection of general-purpose scripts for RNAseq data analysis. Nearly all these
    * Run in parallel across all libraries using `flagstat_cmdgen.sh` and `flaststat_parallel.sh`
    * Extract outputs in .csv form using `flagstat_extract.R`
 
-6.
+6. Continue alignment/mapping/counting steps in R.
+   * Run `NovaSeq_alignment_script.R`
+   * See comments for data-specific modification required, and change working directories as appropriate.
 
