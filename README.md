@@ -30,6 +30,10 @@ Downstream analyses are geared towards single-cell-type RNAseq, namely laser-mic
    * Extract outputs in .csv form using `flagstat_extract.R`
 
 6. Continue alignment/mapping/counting steps in R.
-   * Run `NovaSeq_alignment_script.R`
+   * Run `NovaSeq_alignment_batch.R`
    * See comments for data-specific modification required, and change working directories as appropriate.
+   * This script also calculates measures of potential batch effects
+
+7. Visualize cell-marker enrichment and PCA
+   * `NovaSeq_marker_enrichment_PCA.R`
 
